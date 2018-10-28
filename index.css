@@ -1,0 +1,149 @@
+body
+{
+    font: 20px sans-serif;
+}
+
+header
+{
+    font-size: 2em;
+    text-align: center;
+}
+
+input.toggle-catalog-view:checked ~ .catalog-toggle > label > img
+{
+    transform: rotate(90deg);
+}
+
+input.toggle-catalog-view:checked ~ .catalog-display > .catalog-item
+{
+    display: block;
+    width: auto;
+    height: auto;
+    border: 1px solid lightgrey;
+    border-radius: 0;
+    max-width: 800px;
+}
+
+input.toggle-catalog-view:checked ~ .catalog-display > .catalog-item > 
+.catalog-item-image
+{
+    position: relative;
+    padding-top: 66.66%;
+    width: auto;
+    height: auto;
+}
+
+input.toggle-catalog-view:checked ~ .catalog-display > .catalog-item > 
+.catalog-item-image > img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 0;
+}
+
+input.toggle-catalog-view:checked ~ .catalog-display > .catalog-item 
+.catalog-item-description-more
+{
+    display: block;
+}
+
+input.toggle-catalog-view:checked ~ .catalog-display > .catalog-item 
+.catalog-item-description-age,
+input.toggle-catalog-view:checked ~ .catalog-display > .catalog-item 
+.catalog-item-description-breed,
+input.toggle-catalog-view:checked ~ .catalog-display > .catalog-item 
+.catalog-item-description-diseases
+/*input.toggle-catalog-view:checked ~ .catalog-item
+.catalog-item-description-status*/
+{
+    display: none;
+}
+
+.catalog-item
+{
+    display: inline-block;
+    width: 500px;
+    height: 520px;
+    margin: 8px;
+    border: 1px solid lightgrey;
+    border-radius: 8px;
+    color: dimgray;
+}
+
+.catalog-item:hover
+{
+    box-shadow: 0 3px 3px 3px grey;
+    color: black;
+}
+
+.catalog-item-image
+{
+    width: 500px;
+    height: 333px;
+}
+
+.catalog-item-image > img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px 8px 0 0;
+}
+
+.catalog-item-description
+{
+    padding: 10px;
+}
+
+.catalog-item-description h1
+{
+    margin-top: 0;
+    margin-bottom: .5em;
+    font-size: 1.5em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.catalog-item-description p
+{
+    margin: 0;
+}
+
+.catalog-item-description-name:hover
+{
+    font-style: italic;
+}
+
+.catalog-item-description-more
+{
+    display: none;
+}
+
+.catalog-item-description-age::before
+{
+    content: 'Возраст: ';
+}
+
+.catalog-item-description-breed::before
+{
+    content: 'Порода: ';
+}
+
+.catalog-item-description-diseases::before
+{
+    content: 'Болезни: ';
+}
+
+.catalog-item-description-status
+{
+    margin: 1em 0 !important;
+}
+
+.catalog-item-description-status::before
+{
+    content: 'Статус: ';
+}
