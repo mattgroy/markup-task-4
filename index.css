@@ -44,19 +44,12 @@ input.toggle-cat-view:checked ~ .cat-display > .cat-item
 
 input.toggle-cat-view:checked ~ .cat-display > .cat-item > .cat-item-image
 {
-    position: relative;
-    padding-top: 66.66%;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 66.66%;
 }
 
-input.toggle-cat-view:checked ~ .cat-display > .cat-item > .cat-item-image > img
+input.toggle-cat-view:checked ~ .cat-display > .cat-item > .cat-item-image img
 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
     border-radius: 0;
 }
 
@@ -68,10 +61,14 @@ input.toggle-cat-view:checked ~ .cat-display > .cat-item .cat-item-descr-more
 input.toggle-cat-view:checked ~ .cat-display > .cat-item .cat-item-descr-age,
 input.toggle-cat-view:checked ~ .cat-display > .cat-item .cat-item-descr-breed,
 input.toggle-cat-view:checked ~ .cat-display > .cat-item .cat-item-descr-ill
-/*input.toggle-cat-view:checked ~ .cat-item
-.cat-item-descr-status*/
 {
     display: none;
+}
+
+.cat-display
+{
+
+    text-align: center;
 }
 
 .cat-item
@@ -83,6 +80,7 @@ input.toggle-cat-view:checked ~ .cat-display > .cat-item .cat-item-descr-ill
     border: 1px solid lightgrey;
     border-radius: 8px;
     color: dimgray;
+    text-align: initial;
 }
 
 .cat-item:hover
@@ -97,7 +95,7 @@ input.toggle-cat-view:checked ~ .cat-display > .cat-item .cat-item-descr-ill
     height: 333px;
 }
 
-.cat-item-image > img
+.cat-item-image img
 {
     width: 100%;
     height: 100%;
@@ -110,7 +108,7 @@ input.toggle-cat-view:checked ~ .cat-display > .cat-item .cat-item-descr-ill
     padding: 10px;
 }
 
-.cat-item-descr h1
+.cat-item-descr h2
 {
     margin-top: 0;
     margin-bottom: .5em;
@@ -135,27 +133,7 @@ input.toggle-cat-view:checked ~ .cat-display > .cat-item .cat-item-descr-ill
     display: none;
 }
 
-.cat-item-descr-age::before
-{
-    content: 'Возраст: ';
-}
-
-.cat-item-descr-breed::before
-{
-    content: 'Порода: ';
-}
-
-.cat-item-descr-ill::before
-{
-    content: 'Болезни: ';
-}
-
 .cat-item-descr-status
 {
     margin: 1em 0 !important;
-}
-
-.cat-item-descr-status::before
-{
-    content: 'Статус: ';
 }
